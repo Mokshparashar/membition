@@ -1,0 +1,88 @@
+
+#all-svg-icon {
+    display: flex;
+    visibility: visible;
+    position:inherit;
+    /* border: 3px solid #2196f3;*/
+    top: 187px;
+    padding-left: 104px;
+    right: 0;
+  
+  }
+  
+  .svg-cpy {
+    position:inherit;
+    display: inline-flex;
+    /* border: 3px solid #2196f3;*/
+    margin-right: 10px;
+    margin-top: 0.0rem;
+    padding: 0;
+    right: 0;
+  }
+  
+  .svg-print {
+    position: inherit;
+    display: inline-flex;
+    /* border: 3px solid #2196f3;*/
+    margin-right: 10px;
+    margin-top: 0.0rem;
+    padding: 0;
+    right: 0;
+  }
+  
+  .svg-coll {
+    position: inherit;
+    display: inline-flex;
+    /* border: 3px solid #2196f3;*/
+    margin-right: 10px;
+    margin-top: 0.0rem;
+    padding: 0;
+    right: 0;
+  }
+  
+  .svg-add {
+    position: inherit;
+    display: inline-flex;
+    border: 1px solid #8d39db;
+    background-color: #8d39db;
+    height: 30px;
+    width: 30px;
+    border-radius: 90%;
+    margin-right: 5rem;
+    top: 0rem;
+    padding: 0;
+    right: 0;
+  }
+  
+  #svg-add-add {
+    padding: 7px;
+    opacity: 10;
+    font-size: large;
+    font-family: Roboto, sans-serif;
+    color: white;
+  
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+
+  .search-box-2
+  {
+    padding-left:441px;
+  }
+  
+
+  .svg-add:hover {
+    cursor:pointer;
+  }
+
+  .table-parent-box-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    
+  }

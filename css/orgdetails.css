@@ -1,0 +1,161 @@
+.tabtop
+{
+    padding: 10px;
+
+}
+
+.tabtable{
+    width: 85%;
+    margin: 20px 10px 10px 20px;
+    border-bottom:solid 1px #ccc;
+    
+}
+.tabend
+{
+    text-align: right;
+    padding-right: 10px;
+}
+.tab{
+    text-align: left;
+    width: 100px;
+    padding: 15px 15px 10px 15px;
+    border-bottom:solid 1px #ccc;
+}
+.tab:hover{
+    cursor:pointer;
+    border-right:solid 5px #8c41dc;
+    background-color: var(--lightblueviolet);
+}
+.seltab
+{
+    border-right:solid 5px #8c41dc;    
+}
+.tabdetail{
+    width: 75%;
+    padding: 20px;
+    float: right;
+}
+
+.contentdetail{    
+    padding: 20px;    
+}
+
+.buttoncss{
+    background-color: #8c41dc!important;
+    color: #fff;
+    font-weight: 800;
+    font-size: 33px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    line-height: 1px;
+    border-radius: 25px;
+}
+
+.forms
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row
+{
+    height: 50px;
+    padding-top: 20px;
+}
+
+.forms input {
+    padding: 10px 8px 8px 10px;    
+    outline: none;
+    font-family: Roboto, sans-serif;
+    text-decoration: none solid rgb(18, 28, 18);
+    border-radius: 4px;
+    outline: none;
+    background-color: #F8FAFC;
+    color: #464c59;    
+    font-weight: 500;
+    line-height: 16.125px;
+    border:.2px solid #BDBDBD;
+}
+.forms input:focus {border: 1px solid #2196F3;
+    background-color: #F8FAFC;}
+
+.forms label {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #8c8484;
+    
+}
+.forms select {    
+    height: 37px;
+    position: inherit;
+    background-color: #F8FAFC;
+    border: 1px solid rgb(77 73 73 / 28%);
+    border-radius: 4px;
+    font-weight: 500;
+    color: #464c59;  
+    font-family: Roboto, sans-serif;
+    font-size: 14px;     
+  }
+  .forms select option {   
+    font-weight: 500;
+    color: #464c59;  
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    padding:4px;    
+  }
+  
+  #dropdown:focus {
+    border: 1px solid #2196F3;
+     background-color: #F8FAFC;
+  }
+
+.inputwd-1
+{
+width: 20%;
+}
+
+.inputwd-2
+{
+    width: 40%;
+}
+
+.inputwd-3
+{
+    width: 60%;
+}
+
+.inputwd-4
+{
+    width: 80%;
+}
+.inputwd-5
+{
+    width: 100%;
+}
+
+.button {
+    background-color: #8c41dc!important;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;    
+    line-height: 1px;
+    border-radius: 5px;
+  }
+
+  input[type="checkbox"] {
+    
+    
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    
+  }
+ 

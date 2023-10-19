@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/userlist.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <nav class="navbar flex-space-around">
+    <div class="logo-box flex-space-between">
+      <div>
+        <img src="assets/images/logo-nobg.png" width="50px" height="50px" />
+      </div>
+      <div style="text-align: left;width: 180px;padding-top: 10px;font-size: 18px;"><strong>Membition Client</strong>
+      </div>
+
+      <i class="bx bx-menu bx-sm blueviolet-icon"></i>
+    </div>
+    <div class="search-box">
+      <input type="text" name="search" id="search" placeholder="Search" autocomplete="off" />
+      <i class="bx bx-search-alt-2 bx-xl"></i>
+
+    </div>
+    <div class="tool-box flex-space-around">
+      <div width="70px" height="20px">&nbsp;&nbsp;&nbsp;</div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px"
+        height="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+        <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+      </svg>
+    </div>
+    <div class="profile-box flex-space-around blue-icon">
+      <img src="https://www.berrydashboard.io/static/media/user-round.13b5a31bebd2cc6016d6db2cac8e92d1.svg" alt="" />
+      <i class="bx bx-cog bx-sm"></i>
+    </div>
+  </nav>
+  <!-- Header End -->
+  <!-- section content -->
+  <section class="flex">
+    <!-- Side Menu -->
+ <article style="overflow-x: hidden">
+  <div class="article-box">
+    <h4><a href="Dashboard.html">Home</a></h4>
+  </div>
+  <div class="article-box">
+    <h4>Oraganisation details</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span><a href="OrganisationDetails.html">Org details</a></span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span><a href="RegionalSettings.html">Regional settings</a></span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Application configuration</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Config settings</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Payment settings</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Email templates</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Api integration</span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>User Manager</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>User groups</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>User roles</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span><a href="Userlist.html">Users</a></span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Custom Forms</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Froms Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms list</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Create forms</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Subscription</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span class="basic-elements">Dashboards</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Subscribers</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Membership</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboar</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Membership levels</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Manage members</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Reports</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Event</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Reports</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Communication</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Marketting</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Attendee</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Speaker</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Sponsor</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+
+  <div class="article-box">
+    <h4 class="prebuild-pages">Volunteer</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Marketting</h4>
+    <ul>
+      <li>
+
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Finance</h4>
+    <ul>
+      <li>
+
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Benefits</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Invoices</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Payment Integrations</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Quickbooks integrations</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Search</span>
+      </li>
+  </div>
+
+  <div class="article-box">
+    <h4 class="prebuild-pages">Reports</h4>
+
+
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Search</h4>
+
+
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages"><a href="layout.html">Help</a></h4>
+
+
+  </div>
+</article>
+<!-- Side Menu End -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="container-box flex-space-between">
+        <div class="segment">
+          <h2>User(s)</h2>
+        </div>
+        <div class="segment flex-space-around" style="width:auto;">
+          <i class="bx bxs-home"></i>
+          <i class="bx bx-chevron-right"></i>
+          <h4>User Manager</h4>
+          <i class="bx bx-chevron-right"></i>
+          <h4 style="opacity: 0.6">Users</h4>
+        </div>
+      </div>
+      <div class="container-box-2">
+        <div class="table-parent-box" id="table-parent-box-1">
+          <div class="table-parent-box-child">
+            <h2 style="opacity: 0.8; font-weight: 500">User List</h2>
+            <div class="search-box-2">
+              <input style="height: 2.6rem; width: 18rem" type="text" name="search" id="search" placeholder="Search"
+                autocomplete="off" />
+              <i class="bx bx-search-alt-2 bx-xl"></i>
+            </div>
+            <div>
+              <div id="all-svg-icon">
+                <div class="svg-cpy">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor"
+                    class="bi bi-file-earmark-arrow-up" viewBox="0 0 16 16">
+                    <path
+                      d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z" />
+                    <path
+                      d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                  </svg>
+                </div>
+                <div class="svg-print">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);">
+                    <path
+                      d="M19 7h-1V2H6v5H5a3 3 0 0 0-3 3v7a2 2 0 0 0 2 2h2v3h12v-3h2a2 2 0 0 0 2-2v-7a3 3 0 0 0-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="svg-coll">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);">
+                    <path
+                      d="M19 10H5c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2zM5 20v-8h14l.002 8H5zM5 6h14v2H5zm2-4h10v2H7z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="svg-add hoverPointer" onclick="javascript:document.location='newuser.html'">
+                  <svg id="svg-add-add" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                  </svg>
+                </div>    
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <hr />
+        <div class="table-parent-box" id="table-parent-box-2">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name & Email</th>
+                <th>User Group</th>
+                <th>Role</th>
+                <th>Activity</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>01</th>
+                <th>
+                  <div class="profile-data-box">
+                    <img src="assets/images/user_f_pic.png" alt="user_img" />
+                    <div class="profile-data">
+                      <div class="profile-name">
+                        Preeti Tikekar
+                        <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                      </div>
+                      <div class="profile-email">ptikekar@hotmail.com</div>
+                    </div>
+                  </div>
+                </th>
+                <th>Admin</th>
+                <th>Admin</th>
+                <th>09/21/2023 10:21AM</th>
+                <th>
+                  <p>Active</p>
+                </th>
+                <th>
+                  <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                  <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                </th>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th>02</th>
+                <th>
+                  <div class="profile-data-box">
+                    <img src="assets/images/user_pic.png" alt="user_img" />
+                    <div class="profile-data">
+                      <div class="profile-name">
+                        Akhilesh Gautam
+                        <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                      </div>
+                      <div class="profile-email">agautam@gmail.com</div>
+                    </div>
+                  </div>
+                </th>
+                <th>Membership</th>
+                <th>Manager</th>
+                <th>09/20/2023 10:30PM</th>
+                <th>
+                  <p>Active</p>
+                </th>
+                <th>
+                  <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                  <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                </th>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th>03</th>
+                <th>
+                  <div class="profile-data-box">
+                  <img src="assets/images/user_pic.png" alt="user_img" />
+                    <div class="profile-data">
+                      <div class="profile-name">
+                        Curtis Smith
+                        <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                      </div>
+                      <div class="profile-email">curtis.s@hotmail.com</div>
+                    </div>
+                  </div>
+                </div>
+                </th>
+                <th>Events</th>
+                <th>Finance, Manager</th>
+                <th>08/20/2023 11:30PM</th>
+                <th>
+                  <p>Active</p>
+                </th>
+                <th>
+                  <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                  <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                </th>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th>04</th>
+                <th>
+                  <div class="profile-data-box">
+                    <img src="assets/images/user_pic.png" alt="user_img" />
+                    <div class="profile-data">
+                      <div class="profile-name">
+                        Amit Kumar
+                        <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                      </div>
+                      <div class="profile-email">amitkumar@testmail.com</div>
+                    </div>
+                  </div>
+                </th>
+                <th>Marketing</th>
+                <th>Manager</th>
+                <th>08/20/2022 11:30PM</th>
+                <th>
+                  <p style="color:red!important;">Inactive</p>
+                </th>
+                <th>
+                  <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                  <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!---------------------- pagination------------------------>
+      <div class="pagination">
+        <div class="pagination-box">
+          <i class="bx bx-chevron-left"></i>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>...</span>
+          <span>10</span>
+          <i class="bx bx-chevron-right"></i>
+        </div>
+        <div class="pagination-box">
+          <span>10 rows</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>

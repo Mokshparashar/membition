@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/orgdetails.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>:: Membition - Regional Settings ::</title>
+</head>
+
+<body>
+     <!-- Header Start -->
+     <nav class="navbar flex-space-around">
+      <div class="logo-box flex-space-between">
+        <div>
+          <a href="Dashboard.html"><img src="assets/images/logo-nobg.png" width="50px" height="50px" /></a>
+        </div>
+        <div style="text-align: left;width: 180px;padding-top: 10px;font-size: 18px;" id="clientTitle"><strong>Membition
+            Client</strong>
+        </div>
+  
+        <i class="bx bx-menu bx-sm blueviolet-icon" onclick="ShowSideMenu(this)"></i>
+      </div>
+      <div class="search-box">
+        <input type="text" name="search" id="search" placeholder="Search" autocomplete="off" />
+        <i class="bx bx-search-alt-2 bx-xl"></i>
+  
+      </div>
+      <div class="tool-box flex-space-around" id="orgSettingMenu">
+        <div width="85px" height="20px" style="width: 85px;">&nbsp;&nbsp;&nbsp;</div>
+        <svg xmlns="http://www.w3.org/2000/svg" onclick="showMenu('subnmenu');"
+          class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+        </svg>
+        <div id="subnmenu" class="submenu" onmouseleave="hideMenu('subnmenu');">
+          <div class="article-box">
+            <ul>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="OrganisationDetails.html">Notification 1</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="RegionalSettings.html">Notification 2</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <svg id="orgMenu" onclick="showMenu('orgsmenu');" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+          </path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <div id="orgsmenu" class="submenu" onmouseleave="hideMenu('orgsmenu');">
+          <div class="article-box">
+            <h4 id="1">Oraganisation <i class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2 m1">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="OrganisationDetails.html">Org Details</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="RegionalSettings.html">Regional Settings</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 id="2">System <i class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2 m2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="configsettings.html">Configurations</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="paymentsettings.html">Payment Gateways</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="emailtemplates.html">Email Templates</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="apiintegration.html">API Integrations</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 id="3">User Management <i class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2 m3">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="groups.html">Access Groups</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="roles.html">Roles</a></span>
+              </li>
+              <li>
+                <i class="bx bx-user"></i>
+                <span><a href="Userlist.html">Users</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4><a href="auditlog.html">Log/Audit Trail</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Data Export/Import</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Billing</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Widgets</a></h4>
+          </div>
+        </div>
+  
+      </div>
+      <div class="profile-box flex-space-around blue-icon">
+        <img src="https://www.berrydashboard.io/static/media/user-round.13b5a31bebd2cc6016d6db2cac8e92d1.svg" alt="" />
+        <i class="bx bx-cog bx-sm" onclick="showMenu('userpmenu');"></i>
+        <div id="userpmenu" onmouseleave="hideMenu('userpmenu');">
+          <div class="article-box">
+            <h4>Account</h4>
+            <ul>
+              <li><a href="layout.html">
+                <i class="bx bx-user"></i>
+                <span class="account-elements">Preeti Tikekar</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <ul>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="newuser.html">Profile</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="layout.html">Sign out</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </nav>
+    <!-- Header End -->
+    <!-- section content -->
+    <section class="flex">
+      <sidebar>
+        <i class='bx bx-universal-access bx-sm'></i>
+        <i class='bx bxs-sushi bx-sm'></i>
+        <i class='bx bxs-shower bx-sm'></i>
+        <i class='bx bxs-castle bx-sm'></i>
+        <i class='bx bx-objects-vertical-bottom bx-sm'></i>
+        <i class='bx bxl-xing bx-sm'></i>
+        <i class='bx bxs-home-alt-2 bx-sm'></i>
+        <i class='bx bx-hard-hat bx-sm'></i>
+        <i class='bx bxs-cricket-ball bx-sm'></i>
+      </sidebar>
+      <!-- Side Menu -->
+      <article style="overflow-x: hidden" id="sidemenu">
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Membership <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Membership Levels</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Manage Members</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Finance</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Reports</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4><i class="bx bx-credit-card bx-xl"></i> Events <i class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Event</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Attendee</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Speaker</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Sponsor</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4><i class="bx bx-credit-card bx-xl"></i> Subscription <i class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span class="basic-elements1">Dashboards</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Subscribers</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Volunteer <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Marketting <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+  
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Create</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Custom Forms <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Create</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Finance <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Benefits</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Discounts</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Invoices</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Payment Integrations</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Quickbooks integrations</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Search</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Reports <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Dashboard</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Search <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Advanced Search</span>
+            </li>
+          </ul>
+        </div>
+  
+      </article>
+      <!-- Side Menu End -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Page Title Content -->
+      <div class="container-box flex-space-between">        
+        <div class="segment flex-space-around" style="width:auto;">
+          <i class="bx bxs-home"></i>
+          <i class="bx bx-chevron-right"></i>
+          <h4>Organisation Details</h4>
+          <i class="bx bx-chevron-right"></i>
+          <h4 style="opacity: 0.6">Regional Settings</h4>
+        </div>
+      </div>
+      <!-- Page Content -->
+      <div class="container-box-2" style="height: 90%;">
+        <div class="segment-sub-title">
+          This form will use to setting up the client display settings for date, time, currency and time zone.
+        </div>
+        <div class="sagment-content">
+          <div class="forms contentdetail">
+            <span>You can edit these information anytime.</span>
+            <table class="inputwd-4" style="margin: 0px;">
+              <tr>
+                <td class="row"><label>Date Display Format</label></td>
+                <td class="row"><label>Time Zone</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="cars" id="dropdown" class="inputwd-4">
+                    <option value="4">mm-dd-yyyy</option>
+                    <option value="2">dd-mm-yyyy</option>
+                    <option value="3">dd-MMM-yyyy</option>
+                    <option value="5">MMM-dd-yyyy</option>
+                    <option value="6">yyyy-mm-dd</option>
+                    <option value="7">yyyy-MMM-dd</option>
+                    <option value="2">dd/mm/yyyy</option>
+                    <option value="3">dd/MMM/yyyy</option>
+                    <option value="4">mm/dd/yyyy</option>
+                    <option value="5">MMM/dd/yyyy</option>
+                    <option value="6">yyyy/mm/dd</option>
+                    <option value="7">yyyy/MMM/dd</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="cars" id="dropdown" class="inputwd-4">
+                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                    <option value="-10:00">(GMT -10:00) Hawaii</option>
+                    <option value="-09:50">(GMT -9:30) Taiohae</option>
+                    <option value="-09:00">(GMT -9:00) Alaska</option>
+                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                    <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                    <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                    <option value="-04:50">(GMT -4:30) Caracas</option>
+                    <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                    <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                    <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                    <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                    <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                    <option value="+00:00" selected="selected">(GMT) Western Europe Time, London, Lisbon, Casablanca
+                    </option>
+                    <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                    <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                    <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                    <option value="+03:50">(GMT +3:30) Tehran</option>
+                    <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                    <option value="+04:50">(GMT +4:30) Kabul</option>
+                    <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                    <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                    <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                    <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                    <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                    <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                    <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                    <option value="+08:75">(GMT +8:45) Eucla</option>
+                    <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                    <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                    <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                    <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                    <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                    <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                    <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                    <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                    <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                    <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="row" colspan="2"><label>Time Format</label></td>
+              </tr>
+              <tr>
+                <td colspan="2"><select name="cars" id="dropdown" class="inputwd-1">
+                    <option value="12">12 hours (AM/PM)</option>
+                    <option value="24">24 hours</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td class="row"><label>Default Currency</label></td>
+                <td class="row"><label>Langauge</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="cars" id="dropdown" class="inputwd-4">
+                    <option value="USD">US Dollar</option>
+                    <option value="AFN">Afghan Afghani</option>
+                    <option value="ALL">Albanian Lek</option>
+                    <option value="DZD">Algerian Dinar</option>
+                    <option value="AOA">Angolan Kwanza</option>
+                    <option value="ARS">Argentine Peso</option>
+                    <option value="AMD">Armenian Dram</option>
+                    <option value="AWG">Aruban Florin</option>
+                    <option value="AUD">Australian Dollar</option>
+                    <option value="AZN">Azerbaijani Manat</option>
+                    <option value="BSD">Bahamian Dollar</option>
+                    <option value="BHD">Bahraini Dinar</option>
+                    <option value="BDT">Bangladeshi Taka</option>
+                    <option value="BBD">Barbadian Dollar</option>
+                    <option value="BYR">Belarusian Ruble</option>
+                    <option value="BEF">Belgian Franc</option>
+                    <option value="BZD">Belize Dollar</option>
+                    <option value="BMD">Bermudan Dollar</option>
+                    <option value="BTN">Bhutanese Ngultrum</option>
+                    <option value="BTC">Bitcoin</option>
+                    <option value="BOB">Bolivian Boliviano</option>
+                    <option value="BAM">Bosnia-Herzegovina Convertible Mark</option>
+                    <option value="BWP">Botswanan Pula</option>
+                    <option value="BRL">Brazilian Real</option>
+                    <option value="GBP">British Pound Sterling</option>
+                    <option value="BND">Brunei Dollar</option>
+                    <option value="BGN">Bulgarian Lev</option>
+                    <option value="BIF">Burundian Franc</option>
+                    <option value="KHR">Cambodian Riel</option>
+                    <option value="CAD">Canadian Dollar</option>
+                    <option value="CVE">Cape Verdean Escudo</option>
+                    <option value="KYD">Cayman Islands Dollar</option>
+                    <option value="XOF">CFA Franc BCEAO</option>
+                    <option value="XAF">CFA Franc BEAC</option>
+                    <option value="XPF">CFP Franc</option>
+                    <option value="CLP">Chilean Peso</option>
+                    <option value="CNY">Chinese Yuan</option>
+                    <option value="COP">Colombian Peso</option>
+                    <option value="KMF">Comorian Franc</option>
+                    <option value="CDF">Congolese Franc</option>
+                    <option value="CRC">Costa Rican ColÃ³n</option>
+                    <option value="HRK">Croatian Kuna</option>
+                    <option value="CUC">Cuban Convertible Peso</option>
+                    <option value="CZK">Czech Republic Koruna</option>
+                    <option value="DKK">Danish Krone</option>
+                    <option value="DJF">Djiboutian Franc</option>
+                    <option value="DOP">Dominican Peso</option>
+                    <option value="XCD">East Caribbean Dollar</option>
+                    <option value="EGP">Egyptian Pound</option>
+                    <option value="ERN">Eritrean Nakfa</option>
+                    <option value="EEK">Estonian Kroon</option>
+                    <option value="ETB">Ethiopian Birr</option>
+                    <option value="EUR">Euro</option>
+                    <option value="FKP">Falkland Islands Pound</option>
+                    <option value="FJD">Fijian Dollar</option>
+                    <option value="GMD">Gambian Dalasi</option>
+                    <option value="GEL">Georgian Lari</option>
+                    <option value="DEM">German Mark</option>
+                    <option value="GHS">Ghanaian Cedi</option>
+                    <option value="GIP">Gibraltar Pound</option>
+                    <option value="GRD">Greek Drachma</option>
+                    <option value="GTQ">Guatemalan Quetzal</option>
+                    <option value="GNF">Guinean Franc</option>
+                    <option value="GYD">Guyanaese Dollar</option>
+                    <option value="HTG">Haitian Gourde</option>
+                    <option value="HNL">Honduran Lempira</option>
+                    <option value="HKD">Hong Kong Dollar</option>
+                    <option value="HUF">Hungarian Forint</option>
+                    <option value="ISK">Icelandic KrÃ³na</option>
+                    <option value="INR">Indian Rupee</option>
+                    <option value="IDR">Indonesian Rupiah</option>
+                    <option value="IRR">Iranian Rial</option>
+                    <option value="IQD">Iraqi Dinar</option>
+                    <option value="ILS">Israeli New Sheqel</option>
+                    <option value="ITL">Italian Lira</option>
+                    <option value="JMD">Jamaican Dollar</option>
+                    <option value="JPY">Japanese Yen</option>
+                    <option value="JOD">Jordanian Dinar</option>
+                    <option value="KZT">Kazakhstani Tenge</option>
+                    <option value="KES">Kenyan Shilling</option>
+                    <option value="KWD">Kuwaiti Dinar</option>
+                    <option value="KGS">Kyrgystani Som</option>
+                    <option value="LAK">Laotian Kip</option>
+                    <option value="LVL">Latvian Lats</option>
+                    <option value="LBP">Lebanese Pound</option>
+                    <option value="LSL">Lesotho Loti</option>
+                    <option value="LRD">Liberian Dollar</option>
+                    <option value="LYD">Libyan Dinar</option>
+                    <option value="LTL">Lithuanian Litas</option>
+                    <option value="MOP">Macanese Pataca</option>
+                    <option value="MKD">Macedonian Denar</option>
+                    <option value="MGA">Malagasy Ariary</option>
+                    <option value="MWK">Malawian Kwacha</option>
+                    <option value="MYR">Malaysian Ringgit</option>
+                    <option value="MVR">Maldivian Rufiyaa</option>
+                    <option value="MRO">Mauritanian Ouguiya</option>
+                    <option value="MUR">Mauritian Rupee</option>
+                    <option value="MXN">Mexican Peso</option>
+                    <option value="MDL">Moldovan Leu</option>
+                    <option value="MNT">Mongolian Tugrik</option>
+                    <option value="MAD">Moroccan Dirham</option>
+                    <option value="MZM">Mozambican Metical</option>
+                    <option value="MMK">Myanmar Kyat</option>
+                    <option value="NAD">Namibian Dollar</option>
+                    <option value="NPR">Nepalese Rupee</option>
+                    <option value="ANG">Netherlands Antillean Guilder</option>
+                    <option value="TWD">New Taiwan Dollar</option>
+                    <option value="NZD">New Zealand Dollar</option>
+                    <option value="NIO">Nicaraguan CÃ³rdoba</option>
+                    <option value="NGN">Nigerian Naira</option>
+                    <option value="KPW">North Korean Won</option>
+                    <option value="NOK">Norwegian Krone</option>
+                    <option value="OMR">Omani Rial</option>
+                    <option value="PKR">Pakistani Rupee</option>
+                    <option value="PAB">Panamanian Balboa</option>
+                    <option value="PGK">Papua New Guinean Kina</option>
+                    <option value="PYG">Paraguayan Guarani</option>
+                    <option value="PEN">Peruvian Nuevo Sol</option>
+                    <option value="PHP">Philippine Peso</option>
+                    <option value="PLN">Polish Zloty</option>
+                    <option value="QAR">Qatari Rial</option>
+                    <option value="RON">Romanian Leu</option>
+                    <option value="RUB">Russian Ruble</option>
+                    <option value="RWF">Rwandan Franc</option>
+                    <option value="SVC">Salvadoran ColÃ³n</option>
+                    <option value="WST">Samoan Tala</option>
+                    <option value="SAR">Saudi Riyal</option>
+                    <option value="RSD">Serbian Dinar</option>
+                    <option value="SCR">Seychellois Rupee</option>
+                    <option value="SLL">Sierra Leonean Leone</option>
+                    <option value="SGD">Singapore Dollar</option>
+                    <option value="SKK">Slovak Koruna</option>
+                    <option value="SBD">Solomon Islands Dollar</option>
+                    <option value="SOS">Somali Shilling</option>
+                    <option value="ZAR">South African Rand</option>
+                    <option value="KRW">South Korean Won</option>
+                    <option value="XDR">Special Drawing Rights</option>
+                    <option value="LKR">Sri Lankan Rupee</option>
+                    <option value="SHP">St. Helena Pound</option>
+                    <option value="SDG">Sudanese Pound</option>
+                    <option value="SRD">Surinamese Dollar</option>
+                    <option value="SZL">Swazi Lilangeni</option>
+                    <option value="SEK">Swedish Krona</option>
+                    <option value="CHF">Swiss Franc</option>
+                    <option value="SYP">Syrian Pound</option>
+                    <option value="STD">São Tomé and Príncipe Dobra</option>
+                    <option value="TJS">Tajikistani Somoni</option>
+                    <option value="TZS">Tanzanian Shilling</option>
+                    <option value="THB">Thai Baht</option>
+                    <option value="TOP">Tongan pa'anga</option>
+                    <option value="TTD">Trinidad & Tobago Dollar</option>
+                    <option value="TND">Tunisian Dinar</option>
+                    <option value="TRY">Turkish Lira</option>
+                    <option value="TMT">Turkmenistani Manat</option>
+                    <option value="UGX">Ugandan Shilling</option>
+                    <option value="UAH">Ukrainian Hryvnia</option>
+                    <option value="AED">United Arab Emirates Dirham</option>
+                    <option value="UYU">Uruguayan Peso</option>
+                    <option value="USD">US Dollar</option>
+                    <option value="UZS">Uzbekistan Som</option>
+                    <option value="VUV">Vanuatu Vatu</option>
+                    <option value="VEF">Venezuelan BolÃ­var</option>
+                    <option value="VND">Vietnamese Dong</option>
+                    <option value="YER">Yemeni Rial</option>
+                    <option value="ZMK">Zambian Kwacha</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="cars" id="dropdown" class="inputwd-4">
+                    <option value="en-US">English (United States)</option>
+                    <option value="af">Afrikaans</option>
+                    <option value="sq">Albanian - shqip</option>
+                    <option value="am">Amharic - አማርኛ</option>
+                    <option value="ar">Arabic - العربية</option>
+                    <option value="an">Aragonese - aragonés</option>
+                    <option value="hy">Armenian - հայերեն</option>
+                    <option value="ast">Asturian - asturianu</option>
+                    <option value="az">Azerbaijani - azərbaycan dili</option>
+                    <option value="eu">Basque - euskara</option>
+                    <option value="be">Belarusian - беларуская</option>
+                    <option value="bn">Bengali - বাংলা</option>
+                    <option value="bs">Bosnian - bosanski</option>
+                    <option value="br">Breton - brezhoneg</option>
+                    <option value="bg">Bulgarian - български</option>
+                    <option value="ca">Catalan - català</option>
+                    <option value="ckb">Central Kurdish - کوردی (دەستنوسی عەرەبی)</option>
+                    <option value="zh">Chinese - 中文</option>
+                    <option value="zh-HK">Chinese (Hong Kong) - 中文（香港）</option>
+                    <option value="zh-CN">Chinese (Simplified) - 中文（简体）</option>
+                    <option value="zh-TW">Chinese (Traditional) - 中文（繁體）</option>
+                    <option value="co">Corsican</option>
+                    <option value="hr">Croatian - hrvatski</option>
+                    <option value="cs">Czech - čeština</option>
+                    <option value="da">Danish - dansk</option>
+                    <option value="nl">Dutch - Nederlands</option>
+                    <option value="en">English</option>
+                    <option value="en-AU">English (Australia)</option>
+                    <option value="en-CA">English (Canada)</option>
+                    <option value="en-IN">English (India)</option>
+                    <option value="en-NZ">English (New Zealand)</option>
+                    <option value="en-ZA">English (South Africa)</option>
+                    <option value="en-GB">English (United Kingdom)</option>
+                    <option value="en-US">English (United States)</option>
+                    <option value="eo">Esperanto - esperanto</option>
+                    <option value="et">Estonian - eesti</option>
+                    <option value="fo">Faroese - føroyskt</option>
+                    <option value="fil">Filipino</option>
+                    <option value="fi">Finnish - suomi</option>
+                    <option value="fr">French - français</option>
+                    <option value="fr-CA">French (Canada) - français (Canada)</option>
+                    <option value="fr-FR">French (France) - français (France)</option>
+                    <option value="fr-CH">French (Switzerland) - français (Suisse)</option>
+                    <option value="gl">Galician - galego</option>
+                    <option value="ka">Georgian - ქართული</option>
+                    <option value="de">German - Deutsch</option>
+                    <option value="de-AT">German (Austria) - Deutsch (Österreich)</option>
+                    <option value="de-DE">German (Germany) - Deutsch (Deutschland)</option>
+                    <option value="de-LI">German (Liechtenstein) - Deutsch (Liechtenstein)</option>
+                    <option value="de-CH">German (Switzerland) - Deutsch (Schweiz)</option>
+                    <option value="el">Greek - Ελληνικά</option>
+                    <option value="gn">Guarani</option>
+                    <option value="gu">Gujarati - ગુજરાતી</option>
+                    <option value="ha">Hausa</option>
+                    <option value="haw">Hawaiian - ʻŌlelo Hawaiʻi</option>
+                    <option value="he">Hebrew - עברית</option>
+                    <option value="hi">Hindi - हिन्दी</option>
+                    <option value="hu">Hungarian - magyar</option>
+                    <option value="is">Icelandic - íslenska</option>
+                    <option value="id">Indonesian - Indonesia</option>
+                    <option value="ia">Interlingua</option>
+                    <option value="ga">Irish - Gaeilge</option>
+                    <option value="it">Italian - italiano</option>
+                    <option value="it-IT">Italian (Italy) - italiano (Italia)</option>
+                    <option value="it-CH">Italian (Switzerland) - italiano (Svizzera)</option>
+                    <option value="ja">Japanese - 日本語</option>
+                    <option value="kn">Kannada - ಕನ್ನಡ</option>
+                    <option value="kk">Kazakh - қазақ тілі</option>
+                    <option value="km">Khmer - ខ្មែរ</option>
+                    <option value="ko">Korean - 한국어</option>
+                    <option value="ku">Kurdish - Kurdî</option>
+                    <option value="ky">Kyrgyz - кыргызча</option>
+                    <option value="lo">Lao - ລາວ</option>
+                    <option value="la">Latin</option>
+                    <option value="lv">Latvian - latviešu</option>
+                    <option value="ln">Lingala - lingála</option>
+                    <option value="lt">Lithuanian - lietuvių</option>
+                    <option value="mk">Macedonian - македонски</option>
+                    <option value="ms">Malay - Bahasa Melayu</option>
+                    <option value="ml">Malayalam - മലയാളം</option>
+                    <option value="mt">Maltese - Malti</option>
+                    <option value="mr">Marathi - मराठी</option>
+                    <option value="mn">Mongolian - монгол</option>
+                    <option value="ne">Nepali - नेपाली</option>
+                    <option value="no">Norwegian - norsk</option>
+                    <option value="nb">Norwegian Bokmål - norsk bokmål</option>
+                    <option value="nn">Norwegian Nynorsk - nynorsk</option>
+                    <option value="oc">Occitan</option>
+                    <option value="or">Oriya - ଓଡ଼ିଆ</option>
+                    <option value="om">Oromo - Oromoo</option>
+                    <option value="ps">Pashto - پښتو</option>
+                    <option value="fa">Persian - فارسی</option>
+                    <option value="pl">Polish - polski</option>
+                    <option value="pt">Portuguese - português</option>
+                    <option value="pt-BR">Portuguese (Brazil) - português (Brasil)</option>
+                    <option value="pt-PT">Portuguese (Portugal) - português (Portugal)</option>
+                    <option value="pa">Punjabi - ਪੰਜਾਬੀ</option>
+                    <option value="qu">Quechua</option>
+                    <option value="ro">Romanian - română</option>
+                    <option value="mo">Romanian (Moldova) - română (Moldova)</option>
+                    <option value="rm">Romansh - rumantsch</option>
+                    <option value="ru">Russian - русский</option>
+                    <option value="gd">Scottish Gaelic</option>
+                    <option value="sr">Serbian - српски</option>
+                    <option value="sh">Serbo-Croatian - Srpskohrvatski</option>
+                    <option value="sn">Shona - chiShona</option>
+                    <option value="sd">Sindhi</option>
+                    <option value="si">Sinhala - සිංහල</option>
+                    <option value="sk">Slovak - slovenčina</option>
+                    <option value="sl">Slovenian - slovenščina</option>
+                    <option value="so">Somali - Soomaali</option>
+                    <option value="st">Southern Sotho</option>
+                    <option value="es">Spanish - español</option>
+                    <option value="es-AR">Spanish (Argentina) - español (Argentina)</option>
+                    <option value="es-419">Spanish (Latin America) - español (Latinoamérica)</option>
+                    <option value="es-MX">Spanish (Mexico) - español (México)</option>
+                    <option value="es-ES">Spanish (Spain) - español (España)</option>
+                    <option value="es-US">Spanish (United States) - español (Estados Unidos)</option>
+                    <option value="su">Sundanese</option>
+                    <option value="sw">Swahili - Kiswahili</option>
+                    <option value="sv">Swedish - svenska</option>
+                    <option value="tg">Tajik - тоҷикӣ</option>
+                    <option value="ta">Tamil - தமிழ்</option>
+                    <option value="tt">Tatar</option>
+                    <option value="te">Telugu - తెలుగు</option>
+                    <option value="th">Thai - ไทย</option>
+                    <option value="ti">Tigrinya - ትግርኛ</option>
+                    <option value="to">Tongan - lea fakatonga</option>
+                    <option value="tr">Turkish - Türkçe</option>
+                    <option value="tk">Turkmen</option>
+                    <option value="tw">Twi</option>
+                    <option value="uk">Ukrainian - українська</option>
+                    <option value="ur">Urdu - اردو</option>
+                    <option value="ug">Uyghur</option>
+                    <option value="uz">Uzbek - o‘zbek</option>
+                    <option value="vi">Vietnamese - Tiếng Việt</option>
+                    <option value="wa">Walloon - wa</option>
+                    <option value="cy">Welsh - Cymraeg</option>
+                    <option value="fy">Western Frisian</option>
+                    <option value="xh">Xhosa</option>
+                    <option value="yi">Yiddish</option>
+                    <option value="yo">Yoruba - Èdè Yorùbá</option>
+                    <option value="zu">Zulu - isiZulu</option>
+
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="segment-footer">
+          <input type="button" value="Save" title="Save" class="button" /> <input type="button" value="Cancel"
+            title="Cancel" class="button" />
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Page Content -->
+  </section>
+  <!-- section content End -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

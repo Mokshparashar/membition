@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <nav class="navbar flex-space-around">
+    <div class="logo-box flex-space-between">
+      <div>
+        <img src="../Membition/assets/images/logo-nobg.png" width="50px" height="50px" />
+      </div>
+      <div style="text-align: left;width: 180px;padding-top: 10px;font-size: 18px;"><strong>Membition Client</strong>
+      </div>
+
+      <i class="bx bx-menu bx-sm blueviolet-icon"></i>
+    </div>
+    <div class="search-box">
+      <input type="text" name="search" id="search" placeholder="Search" autocomplete="off" />
+      <i class="bx bx-search-alt-2 bx-xl"></i>
+
+    </div>
+    <div class="tool-box flex-space-around">
+      <div width="70px" height="20px">&nbsp;&nbsp;&nbsp;</div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px"
+        height="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+        <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+      </svg>
+    </div>
+    <div class="profile-box flex-space-around blue-icon">
+      <img src="https://www.berrydashboard.io/static/media/user-round.13b5a31bebd2cc6016d6db2cac8e92d1.svg" alt="" />
+      <i class="bx bx-cog bx-sm"></i>
+    </div>
+  </nav>
+  <!-- Header End -->
+  <!-- section content -->
+  <section class="flex">
+<!-- Side Menu -->
+<article style="overflow-x: hidden">
+  <div class="article-box">
+    <h4><a href="Dashboard.html">Home</a></h4>
+  </div>
+  <div class="article-box">
+    <h4>Oraganisation details</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span><a href="OrganisationDetails.html">Org details</a></span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span><a href="RegionalSettings.html">Regional settings</a></span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Application configuration</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Config settings</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Payment settings</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Email templates</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Api integration</span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>User Manager</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>User groups</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>User roles</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span><a href="Userlist.html">Users</a></span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Custom Forms</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Froms Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms list</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Create forms</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4>Subscription</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span class="basic-elements">Dashboards</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Subscribers</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Membership</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboar</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Membership levels</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Manage members</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Reports</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Event</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Reports</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Communication</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Marketting</span>
+      </li>
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Attendee</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+
+
+    </ul>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Speaker</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Sponsor</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+
+  <div class="article-box">
+    <h4 class="prebuild-pages">Volunteer</h4>
+    <ul>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Marketting</h4>
+    <ul>
+      <li>
+
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Forms</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Manage</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Finance</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Finance</h4>
+    <ul>
+      <li>
+
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Dashboard</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Benefits</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Invoices</span>
+      </li>
+      <li>
+        <i class="bx bx-credit-card bx-xl"></i>
+        <span>Payment Integrations</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Quickbooks integrations</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Reports</span>
+      </li>
+      <li>
+        <i class="bx bx-bar-chart-alt-2"></i>
+        <span>Search</span>
+      </li>
+  </div>
+
+  <div class="article-box">
+    <h4 class="prebuild-pages">Reports</h4>
+
+
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages">Search</h4>
+
+
+  </div>
+  <div class="article-box">
+    <h4 class="prebuild-pages"><a href="layout.html">Help</a></h4>
+
+
+  </div>
+</article>
+<!-- Side Menu End -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="container-box flex-space-between">
+        <div class="segment">
+          <h2>Regional Settings</h2>
+        </div>
+        <div class="segment flex-space-around" style="width:auto;">
+          <i class="bx bxs-home"></i>
+          <i class="bx bx-chevron-right"></i>
+          <h4>Organisation Details</h4>
+          <i class="bx bx-chevron-right"></i>
+          <h4 style="opacity: 0.6">Regional Settings</h4>
+        </div>
+      </div>
+      <div class="container-box-2">
+
+      </div>
+
+
+    </div>
+    <!-- Page Content -->
+  </section>
+  <!-- section content End -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>:: Membition - Home ::</title>
+  <style>
+    .noti_coloumns table tr{
+      height: 40px;
+      border-bottom: 1px solid #60379F;
+    }
+    .noti_coloumns table{
+      margin-bottom: 65px;
+    }
+    #columnchart_values g text{
+      margin: 5px 5px 5px 5px;
+    }
+  </style>
+</head>
+
+<body>
+     <!-- Header Start -->
+     <nav class="navbar flex-space-around">
+      <div class="logo-box flex-space-between">
+        <div id="clientTitle" style="visibility: hidden;">
+          <a href="Dashboard.html"><img src="assets/images/logo-nobg.png" width="50px" height="50px" /></a>
+        </div>
+        <div style="text-align: center;width: 100px;padding-top: 5px;font-size: 18px;" >
+          <a href="Dashboard.html"><img src="assets/images/logo-nobg.png" width="50px" height="50px" /></a>
+        </div>  
+        <i class="bx bx-menu bx-sm blueviolet-icon" onclick="ShowSideMenu(this)"></i>
+      </div>
+      <div class="search-box">
+        <input type="text" name="search" id="search" placeholder="Search" autocomplete="off" />
+        <i class="bx bx-search-alt-2 bx-xl"></i>
+  
+      </div>
+      <div class="tool-box flex-space-around" id="orgSettingMenu">
+        <div width="85px" height="20px" style="width: 85px;">&nbsp;&nbsp;&nbsp;</div>
+        <svg xmlns="http://www.w3.org/2000/svg" onclick="showMenu('subnmenu');"
+          class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+        </svg>
+        <div id="subnmenu" class="submenu" onmouseleave="hideMenu('subnmenu');">
+          <div class="article-box">
+            <ul>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="OrganisationDetails.html">Notification 1</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="RegionalSettings.html">Notification 2</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <svg id="orgMenu" onclick="showMenu('orgsmenu');" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+          </path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <div id="orgsmenu" class="submenu" onmouseleave="hideMenu('orgsmenu');">
+          <div class="article-box">
+            <h4 id="1">Oraganisation <i class='bx bx-chevron-down'></i></h4>
+            <ul class="ul-2 m1">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="OrganisationDetails.html">Org Details</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="RegionalSettings.html">Regional Settings</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 id="2">System <i class='bx bx-chevron-down'></i></h4>
+            <ul class="ul-2 m2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="configsettings.html">Configurations</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="paymentsettings.html">Payment Gateways</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="emailtemplates.html">Email Templates</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="apiintegration.html">API Integrations</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 id="3">User Management <i class='bx bx-chevron-down'></i></h4>
+            <ul class="ul-2 m3">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="groups.html">Access Groups</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="roles.html">Roles</a></span>
+              </li>
+              <li>
+                <i class="bx bx-user"></i>
+                <span><a href="Userlist.html">Users</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4><a href="auditlog.html">Log/Audit Trail</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Data Export/Import</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Billing</a></h4>
+          </div>
+          <div class="article-box">
+            <h4><a href="layout.html">Widgets</a></h4>
+          </div>
+        </div>
+  
+      </div>
+      <div class="profile-box flex-space-around blue-icon">
+        <img src="https://www.berrydashboard.io/static/media/user-round.13b5a31bebd2cc6016d6db2cac8e92d1.svg" alt="" />
+        <i class="bx bx-cog bx-sm" onclick="showMenu('userpmenu');"></i>
+        <div id="userpmenu" onmouseleave="hideMenu('userpmenu');">
+          <div class="article-box">
+            <h4>Account</h4>
+            <ul>
+              <li><a href="layout.html">
+                <i class="bx bx-user"></i>
+                <span class="account-elements">Preeti Tikekar</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <ul>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span><a href="newuser.html">Profile</a></span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span><a href="layout.html">Sign out</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </nav>
+    <!-- Header End -->
+    <!-- section content -->
+    <section class="flex">
+      <sidebar>
+        <i class='bx bx-universal-access bx-sm'></i>
+        <i class='bx bxs-sushi bx-sm'></i>
+        <i class='bx bxs-shower bx-sm'></i>
+        <i class='bx bxs-castle bx-sm'></i>
+        <i class='bx bx-objects-vertical-bottom bx-sm'></i>
+        <i class='bx bxl-xing bx-sm'></i>
+        <i class='bx bxs-home-alt-2 bx-sm'></i>
+        <i class='bx bx-hard-hat bx-sm'></i>
+        <i class='bx bxs-cricket-ball bx-sm'></i>
+      </sidebar>
+      <!-- Side Menu -->
+      <article style="overflow-x: hidden" id="sidemenu">
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i>Membership
+            <i class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <!--<i class="bx bx-credit-card bx-xl"></i>-->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dashboard" width="20px" height="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: rgb(103, 58, 183);"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="13" r="2"></circle><line x1="13.45" y1="11.55" x2="15.5" y2="9.5"></line><path d="M6.4 20a9 9 0 1 1 11.2 0z"></path></svg>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Membership Levels</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Manage Members</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Finance</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Reports</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4><i class="bx bx-credit-card bx-xl"></i> Events <i class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Event</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Attendee</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Speaker</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Sponsor</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4><i class="bx bx-credit-card bx-xl"></i> Subscription <i class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span class="basic-elements1">Dashboards</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Subscribers</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Volunteer <i
+              class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Forms</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Marketting <i
+              class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+  
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Create</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Custom Forms <i
+              class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Create</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Manage</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Finance <i
+              class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Benefits</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Discounts</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Invoices</span>
+            </li>
+            <li>
+              <i class="bx bx-credit-card bx-xl"></i>
+              <span>Payment Integrations</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Quickbooks integrations</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Reports</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Search</span>
+            </li>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Reports <i
+              class='bx bx-chevron-down'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Dashboard</span>
+            </li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Search <i
+              class='bx bx-chevron-down bx-sm'></i></h4>
+          <ul class="ul-2">
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <i class="bx bx-bar-chart-alt-2"></i>
+              <span>Advanced Search</span>
+            </li>
+          </ul>
+        </div>
+  
+      </article>
+      <!-- Side Menu End -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="container-box flex-space-between">
+        <div class="segment">
+          <h2>Membership Dashboard</h2>
+        </div>
+        <div class="segment flex-space-around" style="width:auto;">
+          09/21/2023
+        </div>
+      </div>
+      <div class="dashboard">        
+        <div class="ua_n">
+            <div class="ua_n_box1 ua_n_box">
+                <div class="ua_n_box1_inner1 ">
+                    <div class="ua_inner_box1">
+                        <h1 style="color: #2D77AB;font-size: 30px;">2000</h1>
+                        <p style="font-weight: 600;">All Members</p>
+                    </div>
+                    <div class="ua_inner_box2">
+                        <h1 style="color: #F3E834;font-size: 30px;">1000</h1>
+                        <p style="font-weight: 600; color:aliceblue;">Active Members</p>
+                    </div>
+                </div>
+                <div class="ua_n_box1_inner2 ">
+                    <div class="lo_box">
+                        <div class="lo_title">
+                          <p>Active Membership Statics</p>
+                        </div>
+                        <hr>                        
+                        <div class="lo_columns" style="height: 300px;">
+                          <div id="myChart" style="height: 100%; width: 100%;"></div> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ua_n_box2 ua_n_box">
+                <div class="ua_n_box1_inner1 ">
+                    <div class="ua_inner_box1" style="background-color: #F3E834;">
+                        <h1 style="color: #60379F;font-size: 30px;">800</h1>
+                        <p style="font-weight: 600;">Due Renewal</p>
+                    </div>
+                    <div class="ua_inner_box2" style="background-color: #25127a;">
+                        <h1 style="color: #E56743;font-size: 30px;">200</h1>
+                        <p style="font-weight: 600;color: #fff;">Expired Members</p>
+                    </div>
+                </div>
+                <div class="ua_n_box1_inner2 ">
+                    <div class="lo_box">
+                        <div class="lo_title">
+                            <p>Recent Membership order(s)</p>
+                        </div>
+                        <hr>
+                        <div class="lo_columns" style="height: 300px;">
+                            <div class="lo_column1 lo_column" style="text-align:left!important;">
+                                <div class="lo_coloumn_data">
+                                    <p class="lo_column_titile">Order No</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>ORD-MEM-005</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>ORD-MEM-004</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>ORD-MEM-002</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                  <p>ORD-MEM-001</p>
+                              </div>
+                            </div>
+                            <div class="lo_column2 lo_column" style="text-align:left!important;">
+                                <div class="lo_coloumn_data">
+                                    <p class="lo_column_titile">Customer</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>Ram Kumar</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>Shyam Sharma</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>Mohit Jain</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                  <p>Rashid Khan</p>
+                              </div>
+                            </div>
+                            <div class="lo_column3 lo_column">
+                                <div class="lo_coloumn_data">
+                                    <p class="lo_column_titile">total</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="text-align:right!important;">
+                                    <p>$185.00</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="text-align:right!important;">
+                                    <p>$525.00</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="text-align:right!important;">
+                                    <p>$200.00</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="text-align:right!important;">
+                                  <p>$185.00</p>
+                              </div>
+                            </div>                            
+                            <div class="lo_column5 lo_column">
+                                <div class="lo_coloumn_data">
+                                    <p class="lo_column_titile">status</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>Success</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="color:red;">
+                                    <p>In-Process</p>
+                                </div>
+                                <div class="lo_coloumn_data">
+                                    <p>Success</p>
+                                </div>
+                                <div class="lo_coloumn_data" style="color:red;">
+                                  <p>In-Process</p>
+                              </div>
+                            </div>                            
+                        </div>
+                        <div class="lo_view_all">
+                            <p>view all orders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ua_n_box3 ua_n_box">
+                <div class="notification">
+                    <div class="noti_title">
+                        <span >My Todo List</span>
+                        <span >&nbsp;</span>                        
+                        <span style="margin-left: 144px;" class="noti_view_all" ><a href="#">Add New</a></span>
+                    </div>
+                    <hr/>
+                    <div class="noti_coloumns" style="vertical-align: top;">
+                      <table>
+                        <tr>
+                          <td style="width: 30px;"></td>
+                          <td style="width: 100px;">Task</td>
+                          <td style="width: 100px;">Status</td>                         
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 1</td>  
+                          <td>Due Today</td>                        
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 2</td> 
+                          <td>Due Today</td>                          
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 3</td> 
+                          <td>Due Today</td> 
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 3</td> 
+                          <td>Due Tomorrow</td> 
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 3</td> 
+                          <td>Due Tomorrow</td> 
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 3</td> 
+                          <td>Due In 3 day's</td> 
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox"/></td>
+                          <td>Task 3</td> 
+                          <td>Due In 5 day's</td> 
+                        </tr>
+                      </table>
+                      
+
+                    </div>  
+                    <div class="noti_view_all">
+                        <p>view all feeds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cmr_cr">         
+          <!-- Revenue Chart -->  
+                <div id="columnchart_values" ></div>               
+            </div>
+            <!--End Revenue Chart -->
+        </div>
+    </div>
+    </div>
+    <!-- Page Content -->
+  </section>
+  <!-- section content End -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="script/script.js"></script>
+  <script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    const data = google.visualization.arrayToDataTable([
+      ['Membersihp Type', 'Mhl'],
+      ['Annual',54.8],
+      ['Family',20.2],
+      ['Life Member',10.4],
+      ['Student',4.0],
+      ['Corporate',10.6]
+    ]);
+    
+    const options = {
+      title:'',
+      is3D: true
+    };
+    
+    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+      chart.draw(data, options);
+    }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Element", "Month Revenue", { role: "style" } ],
+          ["Jan-23", 25000, "#b87333"],
+          ["Feb-23", 37000, "silver"],
+          ["Mar-23", 45000, "gold"],
+          ["Apr-23", 20000, "lightblue"],
+          ["May-23", 18000, "gray"],
+          ["Jun-23", 44000, "lightgreen"],
+          ["Jul-23", 36000, "green"],
+          ["Aug-23", 65000, "yellow"],
+          ["Sep-23", 53000, "orange"],
+          ["Oct-23", 34000, "red"]
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+  
+        var options = {
+          title: "Monthly Revenue from Member Registration Report",
+          width: 1200,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
+</body>
+
+</html>

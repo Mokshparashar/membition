@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/userlist.css" />
+  <link rel="stylesheet" href="css/orgdetails.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <title>:: Membition - Organisation Details ::</title>
+  <style>
+    #all-svg-icon {
+      top: 272px !important;
+    }
+  </style>
+</head>
+
+<body>
+      <!-- Header Start -->
+      <nav class="navbar flex-space-around">
+        <div class="logo-box flex-space-between">
+          <div>
+            <a href="Dashboard.html"><img src="assets/images/logo-nobg.png" width="50px" height="50px" /></a>
+          </div>
+          <div style="text-align: left;width: 180px;padding-top: 10px;font-size: 18px;" id="clientTitle"><strong>Membition
+              Client</strong>
+          </div>
+    
+          <i class="bx bx-menu bx-sm blueviolet-icon" onclick="ShowSideMenu(this)"></i>
+        </div>
+        <div class="search-box">
+          <input type="text" name="search" id="search" placeholder="Search" autocomplete="off" />
+          <i class="bx bx-search-alt-2 bx-xl"></i>
+    
+        </div>
+        <div class="tool-box flex-space-around" id="orgSettingMenu">
+          <div width="85px" height="20px" style="width: 85px;">&nbsp;&nbsp;&nbsp;</div>
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="showMenu('subnmenu');"
+            class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+            <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+          </svg>
+          <div id="subnmenu" class="submenu" onmouseleave="hideMenu('subnmenu');">
+            <div class="article-box">
+              <ul>
+                <li>
+                  <i class="bx bx-credit-card bx-xl"></i>
+                  <span><a href="OrganisationDetails.html">Notification 1</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="RegionalSettings.html">Notification 2</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <svg id="orgMenu" onclick="showMenu('orgsmenu');" xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-bell blueviolet-icon" width="20px" height="20px" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+            </path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <div id="orgsmenu" class="submenu" onmouseleave="hideMenu('orgsmenu');">
+            <div class="article-box">
+              <h4 id="1">Oraganisation <i class='bx bx-chevron-down bx-sm'></i></h4>
+              <ul class="ul-2 m1">
+                <li>
+                  <i class="bx bx-credit-card bx-xl"></i>
+                  <span><a href="OrganisationDetails.html">Org Details</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="RegionalSettings.html">Regional Settings</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="article-box">
+              <h4 id="2">System <i class='bx bx-chevron-down bx-sm'></i></h4>
+              <ul class="ul-2 m2">
+                <li>
+                  <i class="bx bx-credit-card bx-xl"></i>
+                  <span><a href="configsettings.html">Configurations</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="paymentsettings.html">Payment Gateways</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="emailtemplates.html">Email Templates</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="apiintegration.html">API Integrations</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="article-box">
+              <h4 id="3">User Management <i class='bx bx-chevron-down bx-sm'></i></h4>
+              <ul class="ul-2 m3">
+                <li>
+                  <i class="bx bx-credit-card bx-xl"></i>
+                  <span><a href="groups.html">Access Groups</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="roles.html">Roles</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-user"></i>
+                  <span><a href="Userlist.html">Users</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="article-box">
+              <h4><a href="auditlog.html">Log/Audit Trail</a></h4>
+            </div>
+            <div class="article-box">
+              <h4><a href="layout.html">Data Export/Import</a></h4>
+            </div>
+            <div class="article-box">
+              <h4><a href="layout.html">Billing</a></h4>
+            </div>
+            <div class="article-box">
+              <h4><a href="layout.html">Widgets</a></h4>
+            </div>
+          </div>
+    
+        </div>
+        <div class="profile-box flex-space-around blue-icon">
+          <img src="https://www.berrydashboard.io/static/media/user-round.13b5a31bebd2cc6016d6db2cac8e92d1.svg" alt="" />
+          <i class="bx bx-cog bx-sm" onclick="showMenu('userpmenu');"></i>
+          <div id="userpmenu" onmouseleave="hideMenu('userpmenu');">
+            <div class="article-box">
+              <h4>Account</h4>
+              <ul>
+                <li><a href="layout.html">
+                  <i class="bx bx-user"></i>
+                  <span class="account-elements">Preeti Tikekar</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="article-box">
+              <ul>
+                <li>
+                  <i class="bx bx-credit-card bx-xl"></i>
+                  <span><a href="newuser.html">Profile</a></span>
+                </li>
+                <li>
+                  <i class="bx bx-bar-chart-alt-2"></i>
+                  <span><a href="layout.html">Sign out</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+      </nav>
+      <!-- Header End -->
+      <!-- section content -->
+      <section class="flex">
+        <sidebar>
+          <i class='bx bx-universal-access bx-sm'></i>
+          <i class='bx bxs-sushi bx-sm'></i>
+          <i class='bx bxs-shower bx-sm'></i>
+          <i class='bx bxs-castle bx-sm'></i>
+          <i class='bx bx-objects-vertical-bottom bx-sm'></i>
+          <i class='bx bxl-xing bx-sm'></i>
+          <i class='bx bxs-home-alt-2 bx-sm'></i>
+          <i class='bx bx-hard-hat bx-sm'></i>
+          <i class='bx bxs-cricket-ball bx-sm'></i>
+        </sidebar>
+        <!-- Side Menu -->
+        <article style="overflow-x: hidden" id="sidemenu">
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Membership <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Forms</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Membership Levels</span>
+              </li>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Manage Members</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Finance</span>
+              </li>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Reports</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4><i class="bx bx-credit-card bx-xl"></i> Events <i class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Event</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Attendee</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Speaker</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Sponsor</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4><i class="bx bx-credit-card bx-xl"></i> Subscription <i class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span class="basic-elements1">Dashboards</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Forms</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Subscribers</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Reports</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Volunteer <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Forms</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Manage</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Reports</span>
+              </li>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Marketting <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+    
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Create</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Manage</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Reports</span>
+              </li>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Custom Forms <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Create</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Manage</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Finance <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Benefits</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Discounts</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Invoices</span>
+              </li>
+              <li>
+                <i class="bx bx-credit-card bx-xl"></i>
+                <span>Payment Integrations</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Quickbooks integrations</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Reports</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Search</span>
+              </li>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Reports <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Dashboard</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-box">
+            <h4 class="prebuild-pages"><i class="bx bx-credit-card bx-xl"></i> Search <i
+                class='bx bx-chevron-down bx-sm'></i></h4>
+            <ul class="ul-2">
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Dashboard</span>
+              </li>
+              <li>
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>Advanced Search</span>
+              </li>
+            </ul>
+          </div>
+    
+        </article>
+        <!-- Side Menu End -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Page Title Content -->
+      <div class="container-box flex-space-between">
+        <!--<div class="segment">
+          <h2>Organisation Details</h2>
+        </div>-->
+        <div class="segment flex-space-around" style="width:auto;">
+          <i class="bx bxs-home"></i>
+          <i class="bx bx-chevron-right"></i>
+          <h4>Organisation Details</h4>
+          <i class="bx bx-chevron-right"></i>
+          <h4 style="opacity: 0.6">Org Details</h4>
+        </div>
+      </div>
+      <!-- Page Content -->
+      <div class="container-box-2" style="height: 90%;">
+        <div class="segment-sub-title">          
+          Organisation profile summary, contact list and the address history can be manage in this page.
+        </div>
+        <div class="sagment-content">
+          <div>
+            <!--<table class="tabtable">
+              <tr>
+                <td class="tab seltab" id="tab1" onclick="clicktab(this);">Profile</td>
+                <td class="tab" id="tab2" onclick="clicktab(this);">Contacts</td>
+                <td class="tab" id="tab3" onclick="clicktab(this);">Address</td>
+                <td class="tabend"><input type="button" value="+" title="+" class="buttoncss" /></td>
+              </tr>
+            </table>-->
+            <div style="width: 250px;float: left;" >
+              <table class="tabtable">
+                <tr>
+                  <td class="tab seltab" id="tab1" onclick="clicktab(this);">Profile</td>                  
+                </tr>
+                <tr>
+                  <td class="tab" id="tab2" onclick="clicktab(this);">Contacts</td>                  
+                </tr>
+                <tr>
+                  <td class="tab" id="tab3" onclick="clicktab(this);">Address</td>                  
+                </tr>                
+              </table>
+            </div>
+            <div id="tab1_detail" class="tabdetail" style="display: block;">
+              <div class="forms">
+                <span>You can edit these information anytime.</span>
+                <table class="inputwd-4" style="margin: 0px;">
+                  <tr>
+                    <td class="row"><label>Organisation Name</label></td>
+                    <td class="row"><label>Organisation Type</label></td>
+                  </tr>
+                  <tr>
+                    <td><input class="inputwd-4" type="text" id="orgName" name="orgName" required /></td>
+                    <td>
+                      <select name="cars" id="dropdown" class="inputwd-5">
+                        <option value="2">Association - Professional</option>
+                        <option value="3">Association - Trade</option>
+                        <option value="4">Association - Community</option>
+                        <option value="5">Association - Medical/Health</option>
+                        <option value="6">Association - PTA/school</option>
+                        <option value="7">Association - Other</option>
+                        <option value="8">Society - Professional</option>
+                        <option value="9">Religious</option>
+                        <option value="10">Club</option>
+                        <option value="11">Charity</option>
+                        <option value="12">Group</option>
+                        <option value="13">Other</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="row" colspan="2"><label>Email Address</label></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><input class="inputwd-5" type="text" id="email" name="email" required /></td>
+                  </tr>
+                  <tr>
+                    <td class="row" colspan="2"><label>Websit URL</label></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><input class="inputwd-5" type="text" id="url" name="url" required
+                        placeholder="https://www.membition.com" /></td>
+                  </tr>
+                  <tr>
+                    <td class="row"><label>Contact No</label></td>
+                    <td class="row"><label>Alt Contact No</label></td>
+                  </tr>
+                  <tr>
+                    <td><input class="inputwd-4" type="text" id="orgName" name="orgName" required /></td>
+                    <td><input class="inputwd-5" type="text" id="orgName" name="orgName" required /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="segment-footer" style="margin-top: 20px;">
+                <input type="button" value="Save" title="Save" class="button" /> <input type="button" value="Cancel"
+                  title="Cancel" class="button" />
+              </div>
+            </div>
+            <div id="tab2_detail" class="tabdetail" style="display: none;">
+              <div class="table-parent-box" id="table-parent-box-1">
+                <div class="table-parent-box-child">
+                  <h2 style="opacity: 0.8; font-weight: 500">Contact(s)</h2>
+                  <div class="search-box-2">
+                    <i class="bx bx-search-alt-2 bx-xl"></i>
+                    <input style="height: 2.6rem; width: 18rem" type="text" name="search" id="search"
+                      placeholder="Search" autocomplete="off" />
+                                        
+                  </div>
+
+                </div>
+              </div>
+              <hr />
+              <div class="table-parent-box" id="table-parent-box-2">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Contact Name & Email</th>
+                      <th>Phone #</th>
+                      <th>Type</th>
+                      <th>Last Active</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>01</th>
+                      <th>
+                        <div class="profile-data-box">
+                          <img src="assets/images/user_f_pic.png" alt="user_img" />
+                          <div class="profile-data">
+                            <div class="profile-name">
+                              Preeti Tikekar
+                              <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                            </div>
+                            <div class="profile-email">ptikekar@hotmail.com</div>
+                          </div>
+                        </div>
+                      </th>
+                      <th>(+1)(999)-900-9999</th>
+                      <th>Primary</th>
+                      <th>09/21/2023 10:21AM</th>
+                      <th>
+                        <p>Active</p>
+                      </th>
+                      <th>
+                        <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                        <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                      </th>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <th>02</th>
+                      <th>
+                        <div class="profile-data-box">
+                          <img src="assets/images/user_pic.png" alt="user_img" />
+                          <div class="profile-data">
+                            <div class="profile-name">
+                              Akhilesh Gautam
+                              <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                            </div>
+                            <div class="profile-email">agautam@gmail.com</div>
+                          </div>
+                        </div>
+                      </th>
+                      <th>(+91) 88888-88888</th>
+                      <th>Secondary</th>
+                      <th>09/20/2023 10:30PM</th>
+                      <th>
+                        <p>Active</p>
+                      </th>
+                      <th>
+                        <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                        <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="tab3_detail" class="tabdetail" style="display: none;">
+              <div class="table-parent-box" id="table-parent-box-1">
+                <div class="table-parent-box-child">
+                  <h2 style="opacity: 0.8; font-weight: 500">Addresse(s)</h2>
+                  <div class="search-box-2">
+                    <i class="bx bx-search-alt-2 bx-xl"></i> 
+                    <input style="height: 2.6rem; width: 18rem" type="text" name="search" id="search"
+                      placeholder="Search" autocomplete="off" />                                       
+                  </div>
+
+                </div>
+              </div>
+              <hr />
+              <div class="table-parent-box" id="table-parent-box-2">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Address</th>
+                      <th>City</th>
+                      <th>State</th>
+                      <th>Zip/Post Code</th>
+                      <th>Address Type</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>02</th>
+                      <th>
+                        <div class="profile-data-box">
+                          <div class="profile-data">
+                            <div class="profile-name">
+                              Address Title
+                              <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                            </div>
+                            <div class="profile-email">Address Line2</div>
+                          </div>
+                        </div>
+                      </th>
+                      <th>My City</th>
+                      <th>My State</th>
+                      <th>98787</th>
+                      <th>
+                        Current
+                      </th>
+                      <th>
+                        <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                        <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                      </th>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <th>01</th>
+                      <th>
+                        <div class="profile-data-box">
+                          <div class="profile-data">
+                            <div class="profile-name">
+                              Address Title
+                              <i class="bx bxs-check-circle" style="color: #1bcc11"></i>
+                            </div>
+                            <div class="profile-email">Address Line2</div>
+                          </div>
+                        </div>
+                      </th>
+                      <th>My City</th>
+                      <th>My State</th>
+                      <th>98787</th>
+                      <th>
+                        Previous
+                      </th>
+                      <th>
+                        <i class="bx bx-message-square bx-sm" style="color: rgb(98, 182, 221)"></i>
+                        <i class="bx bx-block bx-sm" style="color: #f11515; margin-left: 1rem"></i>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--<div class="segment-footer">
+          <input type="button" value="Save" title="Save" class="button"/> <input type="button" value="Cancel" title="Cancel" class="button"/>
+        </div>-->
+      </div>
+    </div>
+    </div>
+    <!-- Page Content -->
+  </section>
+  <!-- section content End -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+  
+  .input-containerii>label {
+    margin-top: 8px;
+    margin-left: 20px;
+  }
+  
+  .input-containerii {
+    background-color: #FFFFFF;
+    position: relative;
+    padding: 14px 12px 14px 12px;
+    line-height: 14.676px;
+    width: 87%;
+    margin: auto;
+    margin-bottom: 2em;
+    /* border:2px solid rgb(0, 255, 98); */
+  }
+  
+  /* dropdown */
+  #dropdown {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    transform: translate(4.9%);
+    /* background: transparent; */
+    background-color: #F8FAFC;
+    border: 1px solid rgb(77 73 73 / 28%);
+    border-radius: 7px;
+    color: #BDBDBD;
+    font-weight: 600;
+    /* font-weight: 550; */
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  #dropdown:focus {
+    border: 1px solid #2196F3;
+     background-color: #F8FAFC;
+  }
+  
+  #labledrop {
+    display: block;
+    width: 86.8%;
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    background: transparent;
+    text-decoration: none solid rgb(18, 25, 38);
+    color: #BDBDBD;
+    font-weight: 600;
+    font-size: 1em;
+    background: transparent;
+    /* border:1px solid rgb(77, 73, 73); */
+    position: relative;
+    transform: translate(4.9%);
+    /* border:2px solid red; */
+    /* background-color: #F8FAFC; */
+    background-color: #F8FAFC;
+    margin-bottom: 6px;
+  
+  
+  }
+  
+  /* option of dropdown */
+  option {
+    color: #BDBDBD;
+    font-weight: 600;
+    border: 2px solid rgb(77, 73, 73);
+    background: transparent;
+    margin-bottom: 90px;
+    background-color: #F8FAFC;
+  }
+  
+  /* for the select  */
+  .radiobutton {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    transform: translate(3%);
+    background-color: white;
+    /* border:2px solid brown; */
+    margin-bottom: 20px;
+  }
+  
+  .radiobutton label {
+    display: block;
+    /* margin-right: 4.5em; */
+    position: relative;
+    transform: translate(-30%);
+  
+    color: #BDBDBD;
+    font-weight: 600;
+    
+    font-size: 15px;
+  
+  }
+  
+  .radiobutton input {
+    display: block;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #142f61;
+    /* background-color: #2196F3; */
+  }
+  
+  .radio_input_lable {
+    /* background-color: black; */
+    /* border:2px solid red; */
+    display: flex;
+    justify-content: flex-start;
+  
+  
+  }
+  
+  .h4class {
+  
+    background: transparent;
+    /* text-decoration: none solid rgb(18,25,38); */
+    line-height: 18.676px;
+    text-decoration: none solid rgb(18, 25, 38);
+    /* background-color: #FFFFFF; */
+    color: #BDBDBD;
+    font-weight: 600;
+    height: 17.671px;
+    position: relative;
+    transform: translate(4.9%);
+    /* border:2px solid yellow; */
+    /* width: 510.75px; */
+  }
+  
+  /* main  container */
+  .containerii {
+  
+    /* border:2px solid red; */
+    position: relative;
+    top: -19px;
+    width: 70%;
+    margin: auto;
+    /* margin-top:-px; */
+    /* border:2px solid green; */
+  }
+  
+  /* topbox */
+  .box {
+    background-color: #FFFFFF;
+    width: 100%;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+  
+  }
+  
+  /* for the input  */
+  .input-containerii input {
+    /* background-color: #FFFFFF; */
+    padding: 16px 14px 16px 14px;
+    margin: -16px -14px -16px -14px;
+    outline: none;
+    font-family: Roboto, sans-serif;
+    text-decoration: none solid rgb(18, 28, 18);
+    border-radius: 8px;
+    outline: none;
+    background-color: #F8FAFC;
+    color: #121926;
+    width: 90% !important;
+    font-weight: 500;
+    line-height: 18.125px;
+    border:.2px solid #BDBDBD;
+  
+  }
+  .input-containerii input:hover{
+    border: .2px solid black;
+  }
+  
+  /* for the label of input */
+  .input-containerii label {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    margin-left: 2px;
+    /* background-color:  #EEF2F6; */
+    color: #BDBDBD;
+    font-weight: 600;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+    font-size: .9em;
+    margin-top: 13px;
+    text-decoration: none solid rgb(33, 150, 243);
+  
+  }
+  
+  /* when click on the input feild this code took the label on the border  just slide it */
+  .input-containerii input:focus+label,
+  .input-containerii input:valid+label {
+    left: 10px;
+    top: -25px;
+    font-size: .8em;
+    background-color: #F8FAFC;
+    color: #2196F3;
+    /* border:1px solid #2196F3; */
+    border-radius: 8px;
+    font-weight: 200;
+  }
+  
+  /* for the focus of input */
+  .input-containerii input:focus {
+    border: 1px solid #2196F3;
+  }
+  
+  /* top section 
+  .topi {
+    background-color: #FFFFFF;
+    display: flex;
+    width: 70%;
+    margin: auto;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;  
+  }
+  
+  .topi div {
+    margin-top: 5px;
+    
+  }
+  
+  .topi>div {
+    background-color: #FFFFFF;
+    color: #121926;
+    text-decoration: none solid rgb(18, 25, 38);
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 25;
+    background:transparent;
+  }*/
+  
+  /* logo img of top section */
+  .imgLogo {
+  
+    /* background-color: brown; */
+    text-decoration: none solid rgb(33, 150, 243);
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    align-items: center;
+  
+  }
+  
+  /* for the line in the top most section */
+  .linebar {
+    background:transparent;
+    width: 99%;
+    height: 2px;
+    margin: auto;
+    border-bottom: 1px solid rgb(35, 51, 121);
+    margin-bottom: 50px;
+    padding: 2px;
+  }
+  
+  /* topbar ship address */
+  .topbar {
+    background-color: #FFFFFF;
+    display: flex;
+    width: 87%;
+    margin: auto;
+    justify-content: space-between;
+    position: relative;
+    transform: translate(0,39%);
+    /* border:5px solid rgb(175, 20, 149); */
+    
+  }
+  
+  /* selected circle first 1 */
+  #firstship {
+    background-color: #2196F3;
+  }
+  
+  /* for the top circle 1, 2, 3 */
+  .ship {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background-color: #364152;
+    /* outline:rgb(255, 0, 0) dashed; */
+    color: white;
+    text-align: center;
+    font-size: .9em;
+    padding:2px;
+  }
+  
+  /* line in between the circle in the top section */
+  .lin {
+    text-decoration: none solid rgb(43, 51, 63);
+    width: 35px;
+    border-bottom: 1px solid #BDBDBD;
+    align-self: center;
+  }
+  
+  /* for the number inside the circle */
+  .shipC {
+    background:transparent;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: .9em;
+    line-height: 21px;
+    /* position: relative;
+    transform: translate(-.5em); */
+    text-decoration: none solid rgb(5, 65, 82);
+    color: #364152;
+    align-self: center;
+    text-align: center;
+  
+  }
+  #shipC1 {
+    background: transparent;
+    font-weight: 550;
+  }
+  
+  /* header */
+  .sign_up {
+    background-color: #FFFFFF;
+    width: 90%;
+    margin: auto;
+    /* border:2px solid red; */
+    margin: 60px auto 20px auto;
+    position: relative;
+    transform: translate(-1%);
+  }
+  
+  /* heading shiping in the top */
+  .h3class {
+    font-weight: 450;
+    background: transparent;
+    padding-left: 4px;
+    /* text-decoration: none solid rgb(18,25,38); */
+    line-height: 19.676px;
+    text-decoration: none solid rgb(18, 25, 38);
+    /* background-color: #FFFFFF; */
+    color: #121926;
+    height: 18.671px;
+    width: 90%;
+    margin-bottom: -5px;
+    margin-left: 2px;
+    font-size: 17px;
+    /* border: 3px solid red; */
+  
+  }
+  
+  
+  
+  .usrform >input {
+  
+    display: block;
+    cursor: text;
+    width: 100%;
+    /* margin-left:150px; */
+    /* margin-left:50px; */
+    line-height: 20.143px;
+    border-radius: 10px;
+    /* background-color: blueviolet; */
+    margin: 0px 24px 0px 14px;
+  }
+  
+  /* for the body of form */
+  
+  
+  /* for the first name and last name it is the container inside it first name and last name is present */
+  #fullNam {
+    /* background-color: #FFFFFF; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 2.1em;
+    background-color: #FFFFFF;
+  }
+  
+  
+  
+  
+  /* checkbox */
+  .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    /* gap:-5px; */
+    line-height: 18.676px;
+    width: 90%;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding-bottom: 30px;
+    position: relative;
+    transform: translate(-2%);
+  
+  }
+  
+  .checkbox>input {
+  
+    height: 20px;
+    width: 20px;
+  }
+  
+  .checkbox>label {
+    background: transparent;
+    font-size: 14px;
+    line-height: 18.676px;
+    margin-left: -13px;
+  
+    /* font-weight: 700; */
+    color: black;
+    /* background-color: black; */
+  
+  }
+  
+  /* checkbox content */
+  
+  
+  /* Buttons */
+  .Button {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 17px;
+    margin-bottom: 60px;
+    /* margin-left: 1px; */
+    /* border:2px solid red; */
+  }
+  
+  .Button button, input[type="reset"] {
+    font-weight: 600;
+    line-height: 24.5px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding: 5px;
+  
+    background-color: #2196F3;
+    color: #FFFFFF;
+    height: 36.5px;
+    width: 64px;
+    font-size: 1em;
+    /* margin-left: -5px; */
+    /* margin: 24px 24 24px 8px; */
+    /* padding: 16px; */
+    /* outline: rgb(255, 255, 255)dashed 1px; */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  
+  
+  }
+  
+  input[type="reset"] {
+    position: relative;
+    transform: translate(-25%);
+  }
+  
+  button:hover, input[type="reset"]:hover {
+    background-color: #0388f5;
+  
+  }
+  
+  .sign_upbody {
+    /* height:50%; */
+    background-color: white;
+    /* border:2px solid red; */
+  }
+  
+  .text-box {
+    background-color: white;
+  }
+  
+  .container {
+    /* border: 2px solid rgb(17, 181, 187); */
+    width: 80vw;
+  
+  }
+  
+  .inner {
+    width: 94%;
+    /* height: 100%; */
+    margin: 0px 5%;
+    /* border: 2px solid rgb(148, 47, 126); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* top header bar */
+  .top_form {
+    /* border: 2px solid black; */
+    height: 13%;
+    margin-top:35px;
+  }
+  
+
+  .button {
+    background-color: #8c41dc!important;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;    
+    line-height: 1px;
+    border-radius: 5px;
+  }

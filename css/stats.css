@@ -1,0 +1,142 @@
+.container-segment-box-1 h1 {
+  font-size: 1.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.container-segment-box-1 {
+  width: 30%;
+}
+.container-box-2 {
+  padding: 2rem 2rem;
+}
+
+.email-detail-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.email-box {
+  width: 7rem;
+  height: 7rem;
+  background-color: rgb(192, 149, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+}
+
+.email-span {
+  display: inline;
+}
+
+.main-email-box {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+}
+
+.container-segment-box-2 h1 {
+  font-size: 1.3rem;
+}
+
+.container-segment-1 {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.container-segment-box-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-segment-2 {
+  margin-top: 2rem;
+}
+#columnchart_material {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-segment-2-box-1 h1 {
+  font-size: 1.3rem;
+}
+
+.first-table {
+  width: 40%;
+  margin: 0%;
+  /* border: 1px solid blueviolet; */
+}
+.second-table {
+  width: 25vw;
+
+  height: 10rem;
+}
+.third-table {
+  box-sizing: content-box;
+  width: 12vw;
+  height: 20rem;
+  padding: 0.5rem 1rem;
+  margin: 0%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+table {
+  /* border: 1px solid blueviolet; */
+  border-radius: 10px;
+  background-color: lightblue;
+}
+.first-table thead th {
+  padding: 1rem 2rem;
+}
+.first-table tbody tr td {
+  padding: 0.5rem 2rem;
+}
+
+.second-table thead th {
+  padding: 1rem 1rem;
+}
+.second-table tbody tr td {
+  padding: 0.5rem 1rem;
+}
+.third-table thead th {
+  padding: 1rem 2rem;
+}
+.third-table tbody tr td {
+  padding: 0.5rem 2rem;
+}
+.container-segment-2-box-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-impact svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.social-impact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.social-impact h3 {
+  padding: 0.6rem 0rem;
+  font-size: 1.5rem;
+}
